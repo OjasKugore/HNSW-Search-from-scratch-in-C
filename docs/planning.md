@@ -161,8 +161,9 @@ vector_free(v);
 
 ---
 
-## Module 2 — Distance Functions
+## Module 2 — Distance Functions ✅ [COMPLETED]
 
+**Status**: Completed & verified in `src/main.c`
 **Time estimate**: 1 hour
 **Syllabus**: Unit I (apply mathematical operations on data)
 **CO**: CO1, CO3
