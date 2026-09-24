@@ -1,0 +1,10 @@
+# Build binaries
+hnsw_demo
+test_hnsw
+
+# Object files & symbols
+*.o
+*.dSYM/
+
+# OS artifacts
+.DS_Store

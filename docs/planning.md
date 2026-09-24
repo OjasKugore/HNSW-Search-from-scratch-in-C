@@ -21,7 +21,7 @@ Mark modules as done by changing `[ ]` → `[x]`.
 ## Progress Tracker
 
 ```
-[ ] Module 0 — Setup & Makefile
+[x] Module 0 — Setup & Makefile
 [ ] Module 1 — Vector ADT
 [ ] Module 2 — Distance Functions
 [ ] Module 3 — Binary Heap (Min)
