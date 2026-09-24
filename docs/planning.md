@@ -23,7 +23,7 @@ Mark modules as done by changing `[ ]` → `[x]`.
 ```
 [x] Module 0 — Setup & Makefile
 [x] Module 1 — Vector ADT
-[ ] Module 2 — Distance Functions
+[x] Module 2 — Distance Functions
 [ ] Module 3 — Binary Heap (Min)
 [ ] Module 4 — Binary Heap (Max) & Unified Heap
 [ ] Module 5 — Visited Set

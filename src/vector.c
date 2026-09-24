@@ -1,7 +1,9 @@
 #include "vector.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <math.h>
 
+#define SQUARE(x) ((x) * (x))
 
 Vector *vector_create(int dimensions){
     //dimensions is a dynamic member,just allotting for vector will only allocate memory for id and dim
@@ -52,4 +54,35 @@ void vector_print(const Vector *v){
         printf("%f, ", v->data[i]);
     }
     printf("]\n");
+}
+
+float dist_l2_sq(const float *a, const float *b, int dim){
+    float dist = 0;
+    for (int i =0; i < dim; i++){
+        dist += SQUARE(a[i] - b[i]);
+    }
+    return dist;
+}
+
+float dist_dot(const float *a, const float *b, int dim){
+    float dot = 0;
+    for (int i = 0; i < dim; i++){
+        dot += a[i] * b[i];
+    }
+    return dot;
+}
+
+float dist_cosine(const float *a, const float *b, int dim){
+    float norm_a = 0.0f;
+    float norm_b = 0.0f;
+    for (int i = 0; i <dim; i++){
+        norm_a += SQUARE(a[i]);
+        norm_b += SQUARE((b[i]));
+    }
+    norm_a = sqrtf(norm_a);
+    norm_b = sqrtf(norm_b);
+    if (norm_a  == 0.0f || norm_b == 0.0f){
+        return 1.0f;
+    }
+    return (1 - (dist_dot(a, b, dim) / (norm_a * norm_b)));
 }
